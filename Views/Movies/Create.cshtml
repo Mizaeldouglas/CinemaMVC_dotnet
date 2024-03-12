@@ -1,0 +1,28 @@
+@model Movie
+
+@{
+    ViewBag.Title = "Adicionar Filme";
+}
+
+<div class="container">
+    <h2>@ViewBag.Title</h2>
+    <form method="post" asp-action="Create">
+        <div class="form-control pb-3">
+            <div class="form-group">
+                <label for="Title">Titulo: </label>
+                <input type="text" class="form-control" id="Title" name="Title" required/>
+            </div>
+            <div class="form-group">
+                <label for="Director">Diretor:</label>
+                <input type="text" class="form-control" id="Director" name="Director" required>
+            </div>
+            <div class="form-group">
+                <label for="Year">Ano:</label>
+                <input type="number" class="form-control" id="Year" name="Year" required>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
